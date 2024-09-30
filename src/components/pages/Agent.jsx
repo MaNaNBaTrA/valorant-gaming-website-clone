@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import styles, { layout } from "../../style";
 import { loadAgents } from "../../constants/scripts";
+import bg from "../../assets/Bg.png"
 
 const Agent = () => {
   let { agentName } = useParams();
@@ -22,7 +23,7 @@ const Agent = () => {
 
   return (
     <>
-      <section className="relative flex items-center justify-center h-screen  sm:h-[85vh] h-[60vh] w-[100vw] sm:px-[5%] px-0">
+      <section className="relative flex items-center justify-center h-screen  sm:h-[85vh] h-[60vh] w-[100vw] sm:px-[5%] px-0" >
         <div className={`relative flex items-end justify-center flex-col w-full h-full`}>
           <div className={`relative flex md:flex-row-reverse flex-col-reverse justify-end items-center`}>
             <div className={`${layout.sectionInfo} relative md:mr-16 max-w-[16rem]`}>
@@ -43,7 +44,7 @@ const Agent = () => {
                 <h5 className="font-semibold text-secondary mb-8">
                   // BIOGRAPHY
                 </h5>
-                <span className="text-white">{agent.description}</span>
+                <span className="text-secondary ">{agent.description}</span>
               </div>
             </div>
           </div>
@@ -76,18 +77,8 @@ const Agent = () => {
             </ul>
           </div>
         </div>
-        <video
-          autoPlay
-          loop
-          muted
-          poster="https://images.contentstack.io/v3/assets/b500ltb6530b271fddd0b1/bltbded518020183769/5eb26f5389bac8148a8006cc/agent-background-generic.JPG"
-          className="absolute sm:w-[100vw] h-full object-cover z-[-1]"
-        >
-          <source
-            src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt29d7c4f6bc077e9e/5eb26f54402b8b4d13a56656/agent-background-generic.mp4"
-            type="video/mp4"
-          />
-        </video>
+ 
+
         <img
           src={agent.fullPortrait}
           alt="agents"

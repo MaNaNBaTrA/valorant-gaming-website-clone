@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import styles, { layout } from "../../../style";
+import Map from "../../../assets/Map.png"
 
 const Maps = () => (
   <div className={`bg-secondary  ${styles.paddingX} ${styles.flexStart}`}>
     <div className={`${styles.boxWidth}`}>
       <section
         id="maps"
-        className={`flex md:flex-row flex-col-reverse relative`}
+        style={{ backgroundImage: `url(${Map})` }}
+        className={`flex md:flex-row flex-col-reverse relative bg-contain bg-right bg-no-repeat  `}
       >
-        <div className={`relative flex md:flex-row flex-col`}>
+        <div className={`relative flex md:flex-row flex-col `}>
           <div className={`${layout.sectionInfo} relative md:ml-20`}>
             <div className="relative m-width-[25%]">
               <h1 className="pt-8 relative">
@@ -37,15 +39,6 @@ const Maps = () => (
                 </Link>
               </div>
             </div>
-          </div>
-          <div
-            className={`flex ${styles.flexCenter} relative md:w-[60%] w-[100%] h-[100%] translate-x-[100px] objext-fit`}
-          >
-            <img
-              src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt02c83424f7b41a97/6243813d8850ee0e8ea0ae56/maps-03ebbf2c074f13a65af1dba0c80f767e.png"
-              alt="agents"
-              className="w-[100%] h-[100%] relative z-[-1]"
-            />
           </div>
         </div>
       </section>
